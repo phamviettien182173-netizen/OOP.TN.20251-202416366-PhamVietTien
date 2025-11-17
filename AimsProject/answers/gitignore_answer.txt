@@ -1,0 +1,12 @@
+Câu hỏi: Tại sao những đường dẫn trên nên được thêm vào .gitignore (nếu không thêm
+thì sao)? Nếu sử dụng những công cụ khác để lập trình Java (như IntelliJ IDEA hoặc VSCode),
+những đường dẫn nào sẽ được thêm vào .gitignore? Trong trường hợp bạn đã lỡ
+commit các file tạm lên Git, nhưng sau đó bạn đã thêm chúng vào .gitignore và muốn Git
+ngừng theo dõi chúng mà không xóa khỏi máy, bạn sẽ cần thực hiện những thao tác nào?
+
+- Vì chúng không phải mã nguồn quan trọng (thừa), có thể mỗi máy sẽ khác nhau nên cần bỏ qua tránh xung đột không cần thiết. Khi thêm thì Git chỉ theo dõi mã nguồn quan trọng là được  
+- Không thêm thì có thể xảy ra lỗi giữa những người dùng khác nhau, cấu hình khác nhau
++ IntelliJ IDEA: .idea, *.iml
++ VSCode:  .vscode
+- Chạy lệnh git rm --cached <file_name> để xóa file khỏi chỉ mục Git (staging area) mà không xóa file khỏi máy. Sau đó
+commit thay đổi này
