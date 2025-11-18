@@ -23,7 +23,6 @@ public class Aims {
         
         System.out.println("\n--- Cart after removing " + removedTitle + " ---");
         cart.print();
-        cart.print();
         
         System.out.println("\n--- Testing edge cases ---");
         cart.removeDVD(dvd4); 

@@ -67,7 +67,6 @@ public class Cart {
         }
         return totalCost;
     }
-
     public void print() {
         System.out.println("***********************CART***********************");
         System.out.println("Order:");
