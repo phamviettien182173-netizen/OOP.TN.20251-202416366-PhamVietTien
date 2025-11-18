@@ -1,0 +1,22 @@
+Tại sao tên học sinh không đổi?	Java sử dụng truyền tham trị (Pass by Value)?
+- Khi s1 và s2 (tham chiếu) được truyền vào swap dưới dạng o1 và o2
+- Dòng o1 = o2; chỉ hoán đổi các tham chiếu cục bộ o1 và o2
+
+Java là truyền tham trị hay tham chiếu?	
+Java là ngôn ngữ lập trình truyền tham trị
+
+Làm thế nào để phương thức swap hoạt động đúng?
+Phải hoán đổi các giá trị thuộc tính bên trong đối tượng, thay vì hoán đổi các biến tham chiếu. Sửa phương thức swap để nhận tham số là Student và hoán đổi các giá trị name và studentId của chúng
+
+    public static void swap_content(Student s1, Student s2) {
+        
+        String tmpName = s1.getName();
+        int tmpId = s1.getStudentId();
+        
+        s1.setName(s2.getName());
+        s1.setStudentId(s2.getStudentId());
+        
+
+        s2.setName(tmpName);
+        s2.setStudentId(tmpId);
+    }
