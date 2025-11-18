@@ -1,0 +1,3 @@
+Câu hỏi: Chuyện gì xảy ra khi thêm phương thức này, tại sao? Bạn lựa chọn phương án nào để giải quyết?
+- Sẽ bị lỗi biên dịch vì bản chất là một mảng nên trùng với phương thức trước đó
+- Nên giữ lại và xóa phương thức addDVD(DigitalVideoDisc[] discs vì phương thức mới linh hoạt hơn, dễ dùng hơn
