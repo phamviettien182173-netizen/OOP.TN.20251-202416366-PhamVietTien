@@ -38,6 +38,16 @@ public class DigitalVideoDisc {
         this.id = ++nbDigitalVideoDiscs;
     }
 
+    @Override
+    public String toString() {
+     return "DVD" + "[" + this.id + "]"
+     + "[" + this.title + "]"
+     + "[" + this.cost + "]"
+     + "[" + this.director + "]"
+     + "[" + this.length + "]"
+     + "[" + this.category + "]";
+    }
+
     public String getTitle() {
         return title;
     }
