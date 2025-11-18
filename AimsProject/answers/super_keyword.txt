@@ -1,0 +1,2 @@
+
+Từ khóa super trong ví dụ lớp Book được sử dụng để gọi constructor của lớp cha Media
