@@ -6,9 +6,12 @@ public class DigitalVideoDisc {
     private String director;
     private int length;
     private double cost; 
-
+    private static int nbDigitalVideoDiscs = 0;
+    private int id;
+    
     public DigitalVideoDisc(String title) {
         this.title = title;
+        this.id = ++nbDigitalVideoDiscs;
     }
 
     public DigitalVideoDisc(String category, String title, double cost) {
