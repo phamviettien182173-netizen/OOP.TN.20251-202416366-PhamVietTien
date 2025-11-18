@@ -41,7 +41,7 @@ public class CartTest {
         System.out.println("\nCart status: 20 items added.");
         cart.print(); 
 
-        System.out.println("\nAdd 21st item :");
+        System.out.println("\n7.Add 21st item :");
         DigitalVideoDisc dvd21 = new DigitalVideoDisc("21st DVD");
         cart.addDVD(dvd21);
     }
