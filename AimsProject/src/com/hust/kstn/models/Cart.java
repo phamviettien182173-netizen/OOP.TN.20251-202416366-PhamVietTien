@@ -10,7 +10,7 @@ public class Cart {
             qtyOrdered++;
             System.out.println("The disc has been added sucessfully");
         } else {
-            System.out.println("The cart is almost full. Cannot add more DVD.");
+            System.out.println("The cart is full. Cannot add more DVD.");
         }
     }
     public void addDVD(DigitalVideoDisc disc1, DigitalVideoDisc disc2) {
@@ -68,14 +68,25 @@ public class Cart {
         return totalCost;
     }
     public void print() {
-        System.out.println("***********************CART***********************");
-        System.out.println("Order:");
+        System.out.println("== THE CURRENT CART ===="); 
+        if (qtyOrdered == 0) {
+            System.out.println("The cart is empty.");
+            System.out.println("========================");
+            return;
+        }
+        
+        System.out.println("Total items: " + qtyOrdered);
+        
+        double subtotal = 0.0;
+        
         for (int i = 0; i < qtyOrdered; i++) {
             DigitalVideoDisc item = itemsInCart[i];
-            System.out.printf("%d. DVD - [%s] - [%s] - [%s] - %d minutes: %.2f $\n",
-                i + 1, item.getTitle(), item.getCategory(), item.getDirector(), item.getLength(), item.getCost());
+            System.out.println(item.toString()); 
+            
+            subtotal += item.getCost();
         }
-        System.out.println("Total Cost: " + calculateTotalCost());
-        System.out.println("**************************************************");
+        
+        System.out.println("Subtotal: " + subtotal + " $"); // 
+        System.out.println("========================");
     }
 }
